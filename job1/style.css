@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #3de073, #0e4a7a, #ad4794, #0fce19, #e23232);
+  background-size: 400% 400%;
+  animation: gradientMove 5s ease infinite;
+  color: #111;
+  text-align: center;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Top Banner */
+.top-banner {
+  background: #004d1a;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px;
+  font-weight: bold;
+}
+.top-banner span {
+  color: #ffcc00;
+  animation: bounceZoom 1.2s infinite;
+}
+
+@keyframes bounceZoom {
+  0%, 100% { transform: scale(1); }
+  20% { transform: scale(1.18); }
+  40% { transform: scale(0.95); }
+  60% { transform: scale(1.12); }
+  80% { transform: scale(0.98); }
+}
+
+/* Products */
+.main-container { padding: 20px; }
+h1 { color: #fff; font-size: 27px; }
+h2 { color: red; font-size: 28px; font-weight: bold; }
+.subtitle { font-size: 18px; font-weight: bold; color: #fff; }
+
+.product {
+  margin: 20px auto;
+  max-width: 600px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+.product img { max-width: 100%; border-radius: 8px; }
+
+.benefits {
+  text-align: left;
+  margin: 15px auto;
+  background: #f4f4f4;
+  padding: 15px;
+  border-radius: 10px;
+}
+.benefits h3 { color: #006400; margin-bottom: 10px; }
+.benefits ul { margin: 0; padding-left: 20px; }
+.benefits ul li { margin-bottom: 8px; font-size: 16px; }
+
+/* Button */
+.buy-btn {
+  background: red;
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 15px;
+  cursor: pointer;
+}
+.buy-btn:hover { background: darkred; }
+.buy-btn.blink { animation: blinkBtn 3s steps(2, start) infinite; }
+
+@keyframes blinkBtn {
+  0%, 100% { background: red; }
+  50% { background: #7a4848; color: red; border: 2px solid rgba(204, 101, 101, 0.5); }
+}
+
+/* FAQ */
+.faq-container {
+  max-width: 700px;
+  margin: 30px auto;
+  text-align: left;
+}
+.faq-container h2 { color: #fff; text-align: center; }
+details {
+  background: #b9d8b3;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+details[open] { background: #a0c99d; }
+summary { font-weight: bold; }
+
+/* Footer */
+.footer {
+  background: #004d1a;
+  color: #fff;
+  padding: 5px 0;
+  position: fixed;
+  bottom: 0; left: 0; width: 100%;
+  font-weight: bold;
+}
+
+/* Popup */
+.form-popup {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.form-container {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 90%;
+}
+.close-btn { float: right; color: red; cursor: pointer; }

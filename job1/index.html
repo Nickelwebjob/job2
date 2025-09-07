@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marketing App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Banner -->
+  <div class="top-banner">
+    FREE DELIVERY ON ALL ORDERS | PAYMENT/CASH ON DELIVERY <br>
+    <span>CURRENTLY SELLING AT ~30% PROMO PRICE</span>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-container">
+    <p class="subtitle">🌿 Create a Private, Stylish Outdoor Oasis Instantly – Easy-to-Install Artificial Leaf Privacy Panels That Block Sun, Wind & Prying Eyes!</p>
+    <p><b>DURABLE, WEATHERPROOF LEAF PRIVACY SCREENS...</b></p>
+    <h1>PERFECT FOR BALCONIES, FENCES & BACKYARDS </h1>
+
+    <!-- Product Example -->
+    <div class="product">
+      <h2>DURABLE, WEATHERPROOF LEAF PRIVACY SCREENS</h2>
+      <p><strong>A Must Have!</strong></p>
+      <img src="images/product1.jpeg" alt="Leaf Privacy Screen">
+
+      <div class="benefits">
+        <h3>SPECIFICATIONS</h3>
+        <ul>
+          <li>GE840IP5873SGNAFAMZ</li>
+          <li>SIZE 1X3M</li>
+          <li>WEIGHT:4Kg</li>
+          <li>MAIN MATERIAL: PSV</li>
+        </ul>
+      </div>
+      <button class="buy-btn" onclick="openForm()">CLICK HERE TO BUY NOW</button>
+    </div>
+  </div>
+
+  <!-- FAQ Section -->
+  <div class="faq-container">
+    <h2>Frequently Asked Questions</h2>
+    <details>
+      <summary>How much privacy does the panel provide?</summary>
+      <p>Our artificial leaf panels are designed with dense foliage and a mesh backing, making them effective at blocking visibility from neighbors and passers-by.</p>
+    </details>
+    <details>
+      <summary>Can I cut or trim the panels?</summary>
+      <p>Yes! The panels can be trimmed with scissors or shears to fit any custom size or shape.</p>
+    </details>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    DESIGN YOUR HOME
+    <button class="buy-btn blink" onclick="openForm()">CLICK HERE TO BUY NOW</button>
+  </div>
+
+  <!-- Popup Form -->
+  <div class="form-popup" id="buyForm">
+    <form class="form-container" id="orderForm">
+      <span class="close-btn" onclick="closeForm()">X</span>
+      <h3>Enter Your Details</h3>
+
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="phone">Phone:</label>
+      <input type="text" id="phone" name="phone" required>
+
+      <label for="alt_phone">Alternative Phone:</label>
+      <input type="text" id="alt_phone" name="alt_phone">
+
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address" required>
+
+      <label for="quantity"><b>QUANTITIES</b></label>
+      <select id="quantity" name="quantity" required>
+        <option value="BUY ONE FOR ksh5600">BUY ONE FOR ksh5600</option>
+        <option value="BUY TWO FOR ksh11000">BUY TWO FOR ksh11000</option>
+        <option value="BUY THREE FOR ksh16500">BUY THREE FOR ksh16500</option>
+      </select>
+
+      <button type="submit">Place Order</button>
+    </form>
+  </div>
+
+  <!-- Thank You Popup -->
+  <div class="form-popup" id="thankYouPopup" style="display:none;">
+    <div class="form-container" style="text-align:center;">
+      <h3 id="thankYouMessage"></h3>
+      <button onclick="closeThankYou()">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
